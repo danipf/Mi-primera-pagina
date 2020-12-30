@@ -83,7 +83,6 @@ body{
      align-items: center;
      flex-wrap: wrap;
  }
- 
  .item{
      width: 30%;
      background: #fff;
@@ -95,10 +94,12 @@ body{
      background: #fff;     
  }
 
+
  [class^="far fa"]{
      font-size: 50px;
      text-align: center;
  }
+
  [class^="fas fa"]{
     font-size: 50px;
     text-align: center;
@@ -118,12 +119,12 @@ body{
      padding-bottom: 60px;
  }
 
- .textos-about-us{
+ .textos-about-us {
      grid-column: 1/-1;
      text-align: center;
  }
 
- .textos-about-us .parrafo{
+ .textos-about-us .parrafo {
      margin-top: 10px;
      color: #ccc;
  }
@@ -144,29 +145,39 @@ body{
  /* Front-end */
 
  .frontend-grid{
-     padding: 80px 0;
+     padding: 480px 0;
  }
  
  .cuerpo-frontend{
-     grid-column: 7/13;
-     grid-row: 1/-1;
-     margin: 10px;
-     text-align: justify;
-
+    width:90%;
+    margin: auto;
+    padding: 64px 0px;
+    display: grid;
+    grid-template-areas:"image parrafo";
+    text-align: justify;
+    gap: 64px;
+ }
+ .frontend-image{
+    grid-area: image;
+    align-self: center;
+}
+ .texto-frontend {
+    grid-area: parrafo;
  }
 
  .texto-frontend h3{
- padding:10px;
+   padding: 10px;
  }
  
  .img-frontend{
-     grid: 7 7;
      grid-column: 1/7;
      grid-row: 1/-1;
      margin: 10px;
      text-align: justify;
  }
 /*Back-end*/
+
+
 
 .cuerpo-backend{
     grid-column: 1/7;
@@ -223,55 +234,55 @@ grid-column: 1/-1;
 }
  
 
-/* @media screen and (max-width: 1100px)
- .header{
-     height: auto;
- }
- .grid{
-     grid-gap: 30px;
- }
- .img-hero, .textos-hero{
-    grid-column: 1/-1;
- }
- .img-hero{
-     text-align: center;
- }
- .textos-hero{
-     margin-top: 40px;
- }
- .header{
-     height: auto;
- }
-
- .services{
-     height: auto;
-     margin-top: 40px;
- }
- .item{
-     width: 60%;
-     margin: 40px 0;
-     height: auto;
-     padding: 40px;
- }
- .img-mission{
-     grid-column: 1/-1;
-     grid-row: 2/3 ;
-     text-align: center;
- }
-
- .textos-mission{
-     grid-column: 1/-1;
-     grid-row: 1/2;
-     align-self: center;
- }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .cuerpo-frontend{
+        display: grid;
+        grid-template-areas:
+                            "image"
+                            "parrafo";
+     }
+     .img-hero, .textos-hero{
+            grid-column: 1/-1;
+         }
+         .img-hero{
+             text-align: center;
+         }
+         .textos-hero{
+             margin-top: 40px;
+         }
+         .header{
+             height: auto;
+         }
+        
+         .services{
+             height: auto;
+             margin-top: 40px;
+         }
+         .item{
+             width: 60%;
+             margin: 40px 0;
+             height: auto;
+             padding: 40px;
+         }
 }
 
- @media screen and (max-width: 400px){
-     .img{
-         max-width: 170px;
-     }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
 
-     .grid{
-         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-     }
- } */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
